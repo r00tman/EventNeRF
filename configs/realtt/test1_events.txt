@@ -1,0 +1,48 @@
+### INPUT
+datadir = <absolute-path-to-code>/data/realtt
+scene = test1_events_fl216
+expname = realtt_test1_events_skip50_thr0.1_fl216_color_negsampling0.1
+basedir = <absolute-path-to-code>/logs
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+trainskip = 50
+
+seed_offset = 0
+
+### TRAINING
+N_iters = 5000001
+N_rand = 1024
+lrate = 0.0005
+lrate_decay_factor = 0.1
+lrate_decay_steps = 50000000
+
+### CASCADE
+cascade_level = 2
+cascade_samples = 64,128
+
+### TESTING
+chunk_size = 8192
+
+### RENDERING
+det = False
+max_freq_log2 = 12
+max_freq_log2_viewdirs = 4
+N_anneal = 3000
+N_anneal_min_freq = 0
+N_anneal_min_freq_viewdirs = 4
+netdepth = 8
+netwidth = 256
+use_viewdirs = True
+activation = tanh
+with_bg = False
+use_ldist_reg = False
+ldist_reg = 0.001
+
+use_annealing=False
+
+### CONSOLE AND TENSORBOARD
+i_img = 1000
+i_print = 100
+i_weights = 10000

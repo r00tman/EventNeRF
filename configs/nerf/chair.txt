@@ -1,0 +1,59 @@
+### INPUT
+datadir = <absolute-path-to-code>/data/nerf
+scene = chair
+expname = nerf_chair
+basedir = <absolute-path-to-code>/logs
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+trainskip = 1
+winsize = 50
+
+is_colored = True
+event_threshold = 0.25
+ 
+seed_offset = 0
+
+### TRAINING
+N_iters = 5000001
+N_rand = 1024
+lrate = 0.0005
+lrate_decay_factor = 0.1
+lrate_decay_steps = 50000000
+
+neg_ratio = 0.1
+
+### CASCADE
+cascade_level = 2
+cascade_samples = 64,128
+
+### TESTING
+chunk_size = 8192
+
+### RENDERING
+det = False
+max_freq_log2 = 12
+max_freq_log2_viewdirs = 4
+N_anneal = 300
+N_anneal_min_freq = 0
+N_anneal_min_freq_viewdirs = 4
+netdepth = 8
+netwidth = 256
+use_viewdirs = True
+
+activation = tanh
+garf_sigma = 0.1
+
+with_bg = False
+tonemap_eps = 0.1
+use_ldist_reg = True
+ldist_reg = 0.0001
+
+use_annealing=False
+use_pe=True
+
+### CONSOLE AND TENSORBOARD
+i_img = 1000
+i_print = 100
+i_weights = 10000

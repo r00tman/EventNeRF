@@ -1,0 +1,66 @@
+### INPUT
+datadir = <absolute-path-to-code>/data/nextgen
+scene = sewing
+expname = nextgen_sewing_cycled_dist_clip_train1
+basedir = <absolute-path-to-code>/logs
+config = None
+ckpt_path = None
+no_reload = False
+testskip = 1
+trainskip = 1
+winsize = 100
+train_split=train1
+
+is_colored = True
+event_threshold = 0.10
+polarity_offset = 0.0
+ 
+seed_offset = 1
+is_cycled=True
+
+### TRAINING
+N_iters = 5000001
+N_rand = 1024
+lrate = 0.0005
+lrate_decay_factor = 0.1
+lrate_decay_steps = 50000000
+
+neg_ratio = 0.05
+
+crop_r = 0.25
+crop_y_min = -0.15
+crop_y_max = 0.25
+
+### CASCADE
+cascade_level = 2
+cascade_samples = 64,128
+
+### TESTING
+chunk_size = 8192
+
+### RENDERING
+det = False
+max_freq_log2 = 12
+max_freq_log2_viewdirs = 4
+N_anneal = 300
+N_anneal_min_freq = 0
+N_anneal_min_freq_viewdirs = 4
+netdepth = 8
+netwidth = 256
+use_viewdirs = True
+
+activation = tanh
+garf_sigma = 0.1
+
+with_bg = False
+tonemap_eps = 1e-5
+use_ldist_reg = False
+ldist_reg = 0.0001
+
+use_annealing=False
+use_pe=True
+
+### CONSOLE AND TENSORBOARD
+i_img = 1000
+i_print = 100
+i_weights = 10000
