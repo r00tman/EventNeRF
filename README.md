@@ -54,6 +54,10 @@ ddp_mesh_nerf.py --config nerf/chair.txt
 
 Replace `nerf/chair.txt` with the path to your trained model config.
 
+
+## Evaluation
+Please find the guide on evaluation, color-correction, and computing the metrics in [`metric/README.md`](https://github.com/r00tman/EventNeRF/blob/main/metric/README.md).
+
 ## Citation
 
 Please cite our work if you use the code.
